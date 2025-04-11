@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="./Files/DMU_64.ico">
   <title>Haijin Zeng</title>
   
-  <!-- Internal CSS inspired by GOV.UK style, retaining header background image and original publication image scale -->
+  <!-- Internal CSS inspired by GOV.UK style with modifications for the publications section -->
   <style>
     /* Base Styles */
     body {
@@ -27,7 +27,7 @@
       text-decoration: underline;
     }
     
-    /* Skip link for accessibility */
+    /* Skip Link for Accessibility */
     .skip-link {
       position: absolute;
       top: -40px;
@@ -41,7 +41,7 @@
       top: 0;
     }
     
-    /* Header with background image */
+    /* Header: Background Image */
     header {
       position: relative;
       width: 100%;
@@ -109,7 +109,7 @@
       margin-left: 20px;
     }
     
-    /* Bio Intro */
+    /* Bio Intro Section */
     .intro {
       display: flex;
       flex-wrap: wrap;
@@ -133,31 +133,32 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-    
-    /* Each Publication Card – arranged vertically */
     .publication-card {
-      display: flex;
-      flex-direction: column;
       background-color: #ffffff;
-      padding: 15px;
       border: 1px solid #b1b4b6;
       border-radius: 4px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
+    /* Enlarge subimages within each card */
     .publication-card img {
-      max-width: 200px;  /* Original scale preserved */
-      margin: 0 auto 15px;
+      width: 100%;
+      max-width: 250px; /* Enlarged from 200px */
+      height: auto;
+      margin-bottom: 10px;
       border: 1px solid #b1b4b6;
       border-radius: 2px;
     }
     .publication-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
       font-size: 1.3em;
+      margin: 8px 0;
     }
-    .publication-card p {
-      margin: 5px 0;
+    .publication-card .pub-info {
       font-size: 0.95em;
+      line-height: 1.4;
     }
     
     /* Back-to-top Button */
@@ -179,10 +180,10 @@
   <script src="jquery.min.js"></script>
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
+  <!-- Skip to content link -->
   <a class="skip-link" href="#main">Skip to content</a>
   
-  <!-- Header with background image -->
+  <!-- Header with background image and teaser text -->
   <header>
     <img src="./IMG_1741.jpeg" alt="Teaser Image">
     <div class="teaser-text">Welcome to my homepage 😄</div>
@@ -245,157 +246,214 @@
     <section id="publications">
       <h2>Featured Publications</h2>
       <div class="publications-grid">
-        
+      
         <!-- Publication Card 1 -->
         <div class="publication-card">
           <img src="./PSR-SCI.png" alt="Spectral Compressive Imaging">
           <h3>Spectral Compressive Imaging via Unmixing-driven Subspace Diffusion Refinement</h3>
-          <p><strong>H. Zeng</strong>*, B. Sun*, Y. Chen, J. Su, Y. Xu</p>
-          <p>ICLR (Spotlight) [<a href="https://openreview.net/pdf?id=Q150eWkQ4I" target="_blank">paper</a> | <a href="https://github.com/SMARK2022/PSR-SCI" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>*, B. Sun*, Y. Chen, J. Su, Y. Xu</p>
+            <p>[<a href="https://openreview.net/pdf?id=Q150eWkQ4I" target="_blank">paper</a>] [<a href="https://github.com/SMARK2022/PSR-SCI" target="_blank">code</a>]</p>
+            <p>ICLR (Spotlight)</p>
+          </div>
         </div>
         
         <!-- Publication Card 2 -->
         <div class="publication-card">
-          <img src="./VLU-Net.png" alt="Vision-Language Network">
+          <img src="./VLU-Net.png" alt="Vision-Language Gradient Descent-driven Network">
           <h3>Vision-Language Gradient Descent-driven All-in-One Deep Unfolding Networks</h3>
-          <p><strong>H. Zeng</strong>*, X. Wang*, Y. Chen, J. Su, J. Liu</p>
-          <p>CVPR [<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a> | <a href="https://github.com/xianggkl/VLU-Net" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>*, X. Wang*, Y. Chen, J. Su, J. Liu</p>
+            <p>[<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a>] [<a href="https://github.com/xianggkl/VLU-Net" target="_blank">code</a>]</p>
+            <p>CVPR</p>
+          </div>
         </div>
         
         <!-- Publication Card 3 -->
         <div class="publication-card">
           <img src="./OTLRM.png" alt="OTLRM">
           <h3>OTLRM: Orthogonal Learning-based Low-Rank Metric for Multi-Dimensional Inverse Problems</h3>
-          <p>X. Wang, <strong>H. Zeng</strong>, and J. Chen et al.</p>
-          <p>AAAI-25 [<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p>X. Wang, <strong>H. Zeng</strong>, and J. Chen et al.</p>
+            <p>[<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a>]</p>
+            <p>AAAI-25</p>
+          </div>
         </div>
         
         <!-- Publication Card 4 -->
         <div class="publication-card">
           <img src="./mambaSCI.png" alt="MambaSCI">
           <h3>MambaSCI: Efficient Mamba-UNet for Quad-Bayer Patterned Video Snapshot Compressive Imaging</h3>
-          <p>Z. Pan*, <strong>H. Zeng</strong>*, K. Zhang et al.</p>
-          <p>NeurIPS [<a href="https://arxiv.org/pdf/2410.14214" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p>Z. Pan*, <strong>H. Zeng</strong>* and K. Zhang et al.</p>
+            <p>[<a href="https://arxiv.org/pdf/2410.14214" target="_blank">paper</a>]</p>
+            <p>NeurIPS</p>
+          </div>
         </div>
         
         <!-- Publication Card 5 -->
         <div class="publication-card">
           <img src="./snapshot_hsi_demo.png" alt="Snapshot HSI">
           <h3>Wavelength-Embedding-guided Filter-Array Transformer for Spectral Demosaicing</h3>
-          <p><strong>H. Zeng</strong>, H. Luong, W. Philips</p>
-          <p>ECCV [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02182.pdf" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, H. Luong, and W. Philips</p>
+            <p>[<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02182.pdf" target="_blank">paper</a>]</p>
+            <p>ECCV</p>
+          </div>
         </div>
         
         <!-- Publication Card 6 -->
         <div class="publication-card">
           <img src="./SAH-SCI.png" alt="SAH-SCI">
           <h3>SAH-SCI: Self-Supervised Adapter for Efficient Hyperspectral Snapshot Compressive Imaging</h3>
-          <p><strong>H. Zeng</strong>*, Y. Liu* &amp; J. Su et al.</p>
-          <p>ECCV [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08105.pdf" target="_blank">paper</a> | <a href="https://github.com/lyuxi/SAH-SCI" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>*, Y. Liu* and J. Su et al.</p>
+            <p>[<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08105.pdf" target="_blank">paper</a>] [<a href="https://github.com/lyuxi/SAH-SCI" target="_blank">code</a>]</p>
+            <p>ECCV</p>
+          </div>
         </div>
         
         <!-- Publication Card 7 -->
         <div class="publication-card">
           <img src="./diffsci.png" alt="DiffSCI">
           <h3>DiffSCI: Zero-Shot Snapshot Compressive Imaging via Iterative Spectral Diffusion Model</h3>
-          <p>Z. Pan*, <strong>H. Zeng</strong>* &amp; K. Zhang et al.</p>
-          <p>CVPR [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Pan_DiffSCI_Zero-Shot_Snapshot_Compressive_Imaging_via_Iterative_Spectral_Diffusion_Model_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p>Z. Pan*, <strong>H. Zeng</strong>* and K. Zhang et al.</p>
+            <p>[<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Pan_DiffSCI_Zero-Shot_Snapshot_Compressive_Imaging_via_Iterative_Spectral_Diffusion_Model_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+            <p>CVPR</p>
+          </div>
         </div>
         
         <!-- Publication Card 8 -->
         <div class="publication-card">
           <img src="./diff_unmix.png" alt="Diff Unmix">
           <h3>Unmixing Diffusion for Self-Supervised Hyperspectral Image Denoising</h3>
-          <p><strong>H. Zeng</strong>, J. Cao, &amp; Wilfried Philips et al.</p>
-          <p>CVPR [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zeng_Unmixing_Diffusion_for_Self-Supervised_Hyperspectral_Image_Denoising_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, J. Cao, and Wilfried Philips et al.</p>
+            <p>[<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zeng_Unmixing_Diffusion_for_Self-Supervised_Hyperspectral_Image_Denoising_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+            <p>CVPR</p>
+          </div>
         </div>
         
         <!-- Publication Card 9 -->
         <div class="publication-card">
           <img src="./DPU.png" alt="DPU">
           <h3>Dual Prior Unfolding for Snapshot Compressive Imaging</h3>
-          <p>J. Zhang*, <strong>H. Zeng</strong>* &amp; J. Cao et al.</p>
-          <p>CVPR [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Dual_Prior_Unfolding_for_Snapshot_Compressive_Imaging_CVPR_2024_paper.pdf" target="_blank">paper</a> | <a href="https://github.com/ZhangJC-2k/DPU" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p>J. Zhang*, <strong>H. Zeng</strong>* and J. Cao et al.</p>
+            <p>[<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Dual_Prior_Unfolding_for_Snapshot_Compressive_Imaging_CVPR_2024_paper.pdf" target="_blank">paper</a>] [<a href="https://github.com/ZhangJC-2k/DPU" target="_blank">code</a>]</p>
+            <p>CVPR</p>
+          </div>
         </div>
         
         <!-- Publication Card 10 -->
         <div class="publication-card">
           <img src="./SSR.png" alt="SSR">
           <h3>Improving Spectral Snapshot Reconstruction with Spectral-Spatial Rectification</h3>
-          <p>J. Zhang, <strong>H. Zeng</strong> &amp; J. Cao et al.</p>
-          <p>CVPR [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Improving_Spectral_Snapshot_Reconstruction_with_Spectral-Spatial_Rectification_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p>J. Zhang, <strong>H. Zeng</strong> and J. Cao et al.</p>
+            <p>[<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Improving_Spectral_Snapshot_Reconstruction_with_Spectral-Spatial_Rectification_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+            <p>CVPR</p>
+          </div>
         </div>
         
         <!-- Publication Card 11 -->
         <div class="publication-card">
           <img src="./DJRD.png" alt="DJRD">
           <h3>Inheriting Bayer's Legacy: Joint Remosaicing and Denoising for Quad Bayer Image Sensor</h3>
-          <p><strong>H. Zeng</strong>*, K. Feng* &amp; Wilfried Philips et al.</p>
-          <p>IJCV [<a href="https://rdcu.be/dJpck" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>*, K. Feng* and Wilfried Philips et al.</p>
+            <p>[<a href="https://rdcu.be/dJpck" target="_blank">paper</a>]</p>
+            <p>IJCV</p>
+          </div>
         </div>
         
         <!-- Publication Card 12 -->
         <div class="publication-card">
           <img src="./EI_demosaic.png" alt="EI Demosaic">
           <h3>Unsupervised Spectral Demosaicing with Lightweight Spectral Attention Networks</h3>
-          <p>K. Feng*, <strong>H. Zeng</strong>* &amp; Y. Zhao et al.</p>
-          <p>IEEE TIP [<a href="https://ieeexplore.ieee.org/document/10443845" target="_blank">paper</a> | <a href="https://github.com/fkmajiji/Unsupervised-Spectral-Demosaicing" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p>K. Feng*, <strong>H. Zeng</strong>* and Y. Zhao et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/document/10443845" target="_blank">paper</a>] [<a href="https://github.com/fkmajiji/Unsupervised-Spectral-Demosaicing" target="_blank">code</a>]</p>
+            <p>IEEE Transactions on Image Processing</p>
+          </div>
         </div>
         
         <!-- Publication Card 13 -->
         <div class="publication-card">
           <img src="./tensor_tnnls.png" alt="Tensor TNNLS">
           <h3>Tensor Completion using Bilayer Multi-mode Low-rank Prior and Total Variation</h3>
-          <p><strong>H. Zeng</strong>, S. Huang, Y. Chen et al.</p>
-          <p>IEEE TNNLS [<a href="https://ieeexplore.ieee.org/document/10128755" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, S. Huang, Y. Chen et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/document/10128755" target="_blank">paper</a>]</p>
+            <p>IEEE Transactions on Neural Networks and Learning Systems</p>
+          </div>
         </div>
         
         <!-- Publication Card 14 -->
         <div class="publication-card">
           <img src="./MCTF.png" alt="MCTF">
           <h3>Multi-mode Core Tensor Factorization based Low-Rankness and Its Applications to Tensor Completion</h3>
-          <p><strong>H. Zeng</strong>, Jize Xue et al.</p>
-          <p>IEEE TMM [<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9927348&amp;tag=1" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, Jize Xue et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9927348&amp;tag=1" target="_blank">paper</a>]</p>
+            <p>IEEE Transactions on Multimedia</p>
+          </div>
         </div>
         
         <!-- Publication Card 15 -->
         <div class="publication-card">
           <img src="./L12SSTV.png" alt="L12SSTV">
           <h3>Hyperspectral Image Restoration via Global <em>L<sub>1-2</sub></em> Spatial-Spectral Total Variation Regularized Local Low-Rank Tensor Recovery</h3>
-          <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
-          <p>IEEE TGRS [<a href="https://ieeexplore.ieee.org/abstract/document/9144237" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/abstract/document/9144237" target="_blank">paper</a>]</p>
+            <p>IEEE Transactions on Geoscience and Remote Sensing</p>
+          </div>
         </div>
         
         <!-- Publication Card 16 -->
         <div class="publication-card">
           <img src="./LRATM.png" alt="LRATM">
           <h3>Enhanced Nonconvex Low-Rank Approximation of Tensor Multi-modes for Tensor Completion</h3>
-          <p><strong>H. Zeng</strong>, Yongyong Chen et al.</p>
-          <p>IEEE TCI [<a href="https://ieeexplore.ieee.org/abstract/document/9333624" target="_blank">paper</a> | <a href="https://github.com/NavyZeng/LRATM" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, Yongyong Chen et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/abstract/document/9333624" target="_blank">paper</a>] [<a href="https://github.com/NavyZeng/LRATM" target="_blank">code</a>]</p>
+            <p>IEEE Transactions on Computational Imaging</p>
+          </div>
         </div>
         
         <!-- Publication Card 17 -->
         <div class="publication-card">
           <img src="./SP_TLx.png" alt="SP_TLx">
           <h3>Hyperspectral Image Denoising via Global Spatial-Spectral Total Variation Regularized Nonconvex Local Low-Rank Tensor Approximation</h3>
-          <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
-          <p>Signal Processing [<a href="https://www.sciencedirect.com/science/article/pii/S0165168420303492" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
+            <p>[<a href="https://www.sciencedirect.com/science/article/pii/S0165168420303492" target="_blank">paper</a>]</p>
+            <p>Signal Processing</p>
+          </div>
         </div>
         
         <!-- Publication Card 18 -->
         <div class="publication-card">
           <img src="./LRSTV.png" alt="LRSTV">
           <h3>All of Low-rank and Sparse: A Recast Total Variation Approach to Hyperspectral Denoising</h3>
-          <p><strong>H. Zeng</strong> and Wilfried Philips et al.</p>
-          <p>IEEE JSTARS [<a href="https://ieeexplore.ieee.org/abstract/document/10201900" target="_blank">paper</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong> and Wilfried Philips et al.</p>
+            <p>[<a href="https://ieeexplore.ieee.org/abstract/document/10201900" target="_blank">paper</a>]</p>
+            <p>IEEE JSTARS</p>
+          </div>
         </div>
         
         <!-- Publication Card 19 -->
         <div class="publication-card">
           <img src="./DPLRTA.png" alt="DPLRTA">
           <h3>Hyperspectral Image Restoration via CNN Denoiser Prior Regularized Low-Rank Tensor Recovery</h3>
-          <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
-          <p>CVIU [<a href="https://www.sciencedirect.com/science/article/pii/S1077314220300710" target="_blank">paper</a> | <a href="https://github.com/NavyZeng/DPLRTA" target="_blank">code</a>]</p>
+          <div class="pub-info">
+            <p><strong>H. Zeng</strong>, Jifeng Ning et al.</p>
+            <p>[<a href="https://www.sciencedirect.com/science/article/pii/S1077314220300710" target="_blank">paper</a>] [<a href="https://github.com/NavyZeng/DPLRTA" target="_blank">code</a>]</p>
+            <p>Computer Vision and Image Understanding</p>
+          </div>
         </div>
         
       </div>
@@ -500,6 +558,5 @@
       });
     });
   </script>
-  
 </body>
 </html>
