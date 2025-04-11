@@ -5,15 +5,14 @@
   <meta name="robots" content="index, follow">
   <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/">
   <meta name="keywords" content="Haijin Zeng, 曾海金, Remote Sensing, Image Processing, Deep Learning, Denoising, Cloud Removal, Hyperspectral">
-  <!-- Responsive design meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="jemdoc.css" type="text/css">
   <link rel="shortcut icon" href="./Files/DMU_64.ico">
   <title>Haijin Zeng</title>
   
-  <!-- Internal CSS for improved design -->
+  <!-- Internal CSS for modern design -->
   <style>
-    /* Base Styles */
+    /* Basic Reset and Base Styles */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -27,8 +26,18 @@
     a:hover {
       text-decoration: underline;
     }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
     
-    /* Header with teaser image */
+    /* Header with Teaser Image */
     header {
       position: relative;
       width: 100%;
@@ -48,7 +57,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: rgba(0, 0, 0, 0.3);
-      padding: 20px;
+      padding: 20px 30px;
       border-radius: 10px;
       color: #fff;
       font-size: 42px;
@@ -65,14 +74,7 @@
       gap: 15px;
     }
     
-    /* Container */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Intro / Bio section */
+    /* Bio Intro */
     .intro {
       display: flex;
       flex-wrap: wrap;
@@ -88,25 +90,23 @@
       flex: 1;
     }
     
-    /* Section styling */
+    /* Section Styling */
     section {
       margin-bottom: 40px;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
     }
     ul {
       list-style-type: disc;
       margin-left: 20px;
     }
     
-    /* Publication entries */
+    /* Publication Entries */
     .publication {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
     }
     .publication img {
       max-width: 200px;
@@ -116,7 +116,12 @@
       flex: 1;
     }
     
-    /* Back-to-top button */
+    /* Lists for Reviewer and Awards sections */
+    .list-inline li {
+      margin-bottom: 5px;
+    }
+    
+    /* Back-to-top Button */
     .back-to-top {
       position: fixed;
       bottom: 40px;
@@ -134,7 +139,7 @@
   <script src="jquery.min.js"></script>
 </head>
 <body>
-  <!-- Header: Teaser image with centered text -->
+  <!-- Header with Teaser Image and Welcome Text -->
   <header>
     <img src="./IMG_1741.jpeg" alt="Teaser Image">
     <div class="teaser-text">Welcome to my homepage 😄</div>
@@ -147,7 +152,8 @@
     <a href="#publications">Publications</a>
     <a href="#membership">Membership</a>
     <a href="#fundings">Fundings</a>
-    <a href="#reviewer">Reviewer Roles</a>
+    <a href="#journal-reviewer">Journal Reviewer</a>
+    <a href="#conference-reviewer">Conference Reviewer</a>
     <a href="#awards">Awards</a>
     <a href="#more">More about Me</a>
   </nav>
@@ -163,20 +169,27 @@
           <p><em>Ph.D Candidate</em></p>
           <p>Email: haijin.zeng@ugent.be</p>
           <p>
-            Ghent University | 
+            Ghent University &nbsp;|&nbsp;
             <a href="https://scholar.google.com/citations?user=e9f3XqcAAAAJ&hl=en" target="_blank">Google Scholar</a>
           </p>
           <p>Location: St-Pietersnieuwstraat 41, B-9000 Gent, Belgium</p>
+          <!-- You may add additional links if needed -->
         </div>
       </div>
+      <p>
+        I am a PhD candidate at Ghent University, working under <a href="https://scholar.google.com/citations?hl=en&user=KJiFumUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Prof. Wilfried Philips</a> and Prof. Hiep Luong. Prior to this, I received my Master's degree in Applied Mathematics from Northwest A&F University.
+      </p>
+      <p>
+        My primary areas of research include computational imaging, tensor completion, hyperspectral imaging, and mobile intelligent photography and imaging. My goal is to develop improved imaging techniques that push the boundaries of machine vision.
+      </p>
     </section>
     
     <!-- Research Topic Section -->
     <section id="research">
       <h2>Research Topic</h2>
-      <p>I work in the fields of computational imaging and tensor theory. My current research includes:</p>
+      <p>I work in the fields of computational imaging and tensor theory. Currently, I focus on the following topics:</p>
       <ul>
-        <li><strong>Image Signal Processing:</strong> Mobile Cameras, Spectral Cameras</li>
+        <li><strong>Image Signal Processing:</strong> Mobile Camera, Spectral Camera</li>
         <li><strong>Computational Imaging:</strong> MSFA/Snapshot Spectral Imaging, MRI, Bayer and Non-Bayer Imaging</li>
         <li><strong>Tensor Theory:</strong> Low-Rank Tensor Representation, Convex and Non-convex Optimization</li>
       </ul>
@@ -185,9 +198,10 @@
     <!-- Publications Section -->
     <section id="publications">
       <h2>Publications</h2>
-      <!-- Example Publication Entry -->
+      
+      <!-- Publication 1 -->
       <div class="publication">
-        <img src="./PSR-SCI.png" alt="Spectral Compressive Imaging">
+        <img src="./PSR-SCI.png" alt="PSR-SCI">
         <div class="pub-info">
           <h3>Spectral Compressive Imaging via Unmixing-driven Subspace Diffusion Refinement</h3>
           <p><strong>H. Zeng</strong>*, B. Sun*, Y. Chen, J. Su, Y. Xu [<a href="https://openreview.net/pdf?id=Q150eWkQ4I" target="_blank">paper</a>] 
@@ -195,7 +209,193 @@
           <p>International Conference on Learning Representations (ICLR, Spotlight)</p>
         </div>
       </div>
-      <!-- Add additional publications here following the same pattern -->
+      
+      <!-- Publication 2 -->
+      <div class="publication">
+        <img src="./VLU-Net.png" alt="VLU-Net">
+        <div class="pub-info">
+          <h3>Vision-Language Gradient Descent-driven All-in-One Deep Unfolding Networks</h3>
+          <p><strong>H. Zeng</strong>*, X. Wang*, Y. Chen, J. Su, J. Liu [<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a>] 
+          <a href="https://github.com/xianggkl/VLU-Net" target="_blank">[code]</a></p>
+          <p>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 3 -->
+      <div class="publication">
+        <img src="./OTLRM.png" alt="OTLRM">
+        <div class="pub-info">
+          <h3>OTLRM: Orthogonal Learning-based Low-Rank Metric for Multi-Dimensional Inverse Problems</h3>
+          <p>X. Wang, <strong>H. Zeng</strong> and J. Chen et al. [<a href="https://arxiv.org/pdf/2503.16930" target="_blank">paper</a>]</p>
+          <p>AAAI Conference on Artificial Intelligence (AAAI-25)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 4 -->
+      <div class="publication">
+        <img src="./mambaSCI.png" alt="MambaSCI">
+        <div class="pub-info">
+          <h3>MambaSCI: Efficient Mamba-UNet for Quad-Bayer Patterned Video Snapshot Compressive Imaging</h3>
+          <p>Z. Pan*, <strong>H. Zeng</strong>* and K. Zhang et al. [<a href="https://arxiv.org/pdf/2410.14214" target="_blank">paper</a>]</p>
+          <p>Annual Conference on Neural Information Processing Systems (NeurIPS)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 5 -->
+      <div class="publication">
+        <img src="./snapshot_hsi_demo.png" alt="Snapshot HSI">
+        <div class="pub-info">
+          <h3>Wavelength-Embedding-guided Filter-Array Transformer for Spectral Demosaicing</h3>
+          <p><strong>H. Zeng</strong>, H. Luong and W. Philips [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02182.pdf" target="_blank">paper</a>]</p>
+          <p>European Conference on Computer Vision (ECCV)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 6 -->
+      <div class="publication">
+        <img src="./SAH-SCI.png" alt="SAH-SCI">
+        <div class="pub-info">
+          <h3>SAH-SCI: Self-Supervised Adapter for Efficient Hyperspectral Snapshot Compressive Imaging</h3>
+          <p><strong>H. Zeng</strong>*, Y. Liu* and J. Su et al. [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08105.pdf" target="_blank">paper</a>] 
+          <a href="https://github.com/lyuxi/SAH-SCI" target="_blank">[code]</a></p>
+          <p>European Conference on Computer Vision (ECCV)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 7 -->
+      <div class="publication">
+        <img src="./diffsci.png" alt="DiffSCI">
+        <div class="pub-info">
+          <h3>DiffSCI: Zero-Shot Snapshot Compressive Imaging via Iterative Spectral Diffusion Model</h3>
+          <p>Z. Pan*, <strong>H. Zeng</strong>* and K. Zhang et al. [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Pan_DiffSCI_Zero-Shot_Snapshot_Compressive_Imaging_via_Iterative_Spectral_Diffusion_Model_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <p>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 8 -->
+      <div class="publication">
+        <img src="./diff_unmix.png" alt="Diff Unmix">
+        <div class="pub-info">
+          <h3>Unmixing Diffusion for Self-Supervised Hyperspectral Image Denoising</h3>
+          <p><strong>H. Zeng</strong>, J. Cao, and Wilfried Philips et al. [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zeng_Unmixing_Diffusion_for_Self-Supervised_Hyperspectral_Image_Denoising_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <p>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 9 -->
+      <div class="publication">
+        <img src="./DPU.png" alt="DPU">
+        <div class="pub-info">
+          <h3>Dual Prior Unfolding for Snapshot Compressive Imaging</h3>
+          <p>J. Zhang*, <strong>H. Zeng</strong>* and J. Cao et al. [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Dual_Prior_Unfolding_for_Snapshot_Compressive_Imaging_CVPR_2024_paper.pdf" target="_blank">paper</a>]
+          <a href="https://github.com/ZhangJC-2k/DPU" target="_blank">[code]</a></p>
+          <p>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 10 -->
+      <div class="publication">
+        <img src="./SSR.png" alt="SSR">
+        <div class="pub-info">
+          <h3>Improving Spectral Snapshot Reconstruction with Spectral-Spatial Rectification</h3>
+          <p>J. Zhang, <strong>H. Zeng</strong> and J. Cao et al. [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Improving_Spectral_Snapshot_Reconstruction_with_Spectral-Spatial_Rectification_CVPR_2024_paper.pdf" target="_blank">paper</a>]</p>
+          <p>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 11 -->
+      <div class="publication">
+        <img src="./DJRD.png" alt="DJRD">
+        <div class="pub-info">
+          <h3>Inheriting Bayer's Legacy: Joint Remosaicing and Denoising for Quad Bayer Image Sensor</h3>
+          <p><strong>H. Zeng</strong>*, K. Feng* and Wilfried Philips et al. [<a href="https://rdcu.be/dJpck" target="_blank">paper</a>]</p>
+          <p>International Journal of Computer Vision (IJCV)</p>
+        </div>
+      </div>
+      
+      <!-- Publication 12 -->
+      <div class="publication">
+        <img src="./EI_demosaic.png" alt="EI Demosaic">
+        <div class="pub-info">
+          <h3>Unsupervised Spectral Demosaicing with Lightweight Spectral Attention Networks</h3>
+          <p>K. Feng*, <strong>H. Zeng</strong>* and Y. Zhao et al. [<a href="https://ieeexplore.ieee.org/document/10443845" target="_blank">paper</a>]
+          <a href="https://github.com/fkmajiji/Unsupervised-Spectral-Demosaicing" target="_blank">[code]</a></p>
+          <p>IEEE Transactions on Image Processing</p>
+        </div>
+      </div>
+      
+      <!-- Publication 13 -->
+      <div class="publication">
+        <img src="./tensor_tnnls.png" alt="Tensor TNNLS">
+        <div class="pub-info">
+          <h3>Tensor Completion using Bilayer Multi-mode Low-rank Prior and Total Variation</h3>
+          <p><strong>H. Zeng</strong>, S. Huang, Y. Chen et al. [<a href="https://ieeexplore.ieee.org/document/10128755" target="_blank">paper</a>]</p>
+          <p>IEEE Transactions on Neural Networks and Learning Systems</p>
+        </div>
+      </div>
+      
+      <!-- Publication 14 -->
+      <div class="publication">
+        <img src="./MCTF.png" alt="MCTF">
+        <div class="pub-info">
+          <h3>Multi-mode Core Tensor Factorization based Low-Rankness and Its Applications to Tensor Completion</h3>
+          <p><strong>H. Zeng</strong>, Jize Xue et al. [<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9927348&amp;tag=1" target="_blank">paper</a>]</p>
+          <p>IEEE Transactions on Multimedia</p>
+        </div>
+      </div>
+      
+      <!-- Publication 15 -->
+      <div class="publication">
+        <img src="./L12SSTV.png" alt="L12SSTV">
+        <div class="pub-info">
+          <h3>Hyperspectral Image Restoration via Global <span style="font-style:italic;">L<sub>1-2</sub></span> Spatial-Spectral Total Variation Regularized Local Low-Rank Tensor Recovery</h3>
+          <p><strong>H. Zeng</strong>, Jifeng Ning et al. [<a href="https://ieeexplore.ieee.org/abstract/document/9144237" target="_blank">paper</a>]</p>
+          <p>IEEE Transactions on Geoscience and Remote Sensing</p>
+        </div>
+      </div>
+      
+      <!-- Publication 16 -->
+      <div class="publication">
+        <img src="./LRATM.png" alt="LRATM">
+        <div class="pub-info">
+          <h3>Enhanced nonconvex low-rank approximation of tensor multi-modes for tensor completion</h3>
+          <p><strong>H. Zeng</strong>, Yongyong Chen et al. [<a href="https://ieeexplore.ieee.org/abstract/document/9333624" target="_blank">paper</a>]
+          <a href="https://github.com/NavyZeng/LRATM" target="_blank">[code]</a></p>
+          <p>IEEE Transactions on Computational Imaging</p>
+        </div>
+      </div>
+      
+      <!-- Publication 17 -->
+      <div class="publication">
+        <img src="./SP_TLx.png" alt="SP_TLx">
+        <div class="pub-info">
+          <h3>Hyperspectral Image Denoising via Global Spatial-Spectral Total Variation Regularized Nonconvex Local Low-Rank Tensor Approximation</h3>
+          <p><strong>H. Zeng</strong>, Jifeng Ning et al. [<a href="https://www.sciencedirect.com/science/article/pii/S0165168420303492" target="_blank">paper</a>]</p>
+          <p>Signal Processing</p>
+        </div>
+      </div>
+      
+      <!-- Publication 18 -->
+      <div class="publication">
+        <img src="./LRSTV.png" alt="LRSTV">
+        <div class="pub-info">
+          <h3>All of Low-rank and Sparse: A Recast Total Variation Approach to Hyperspectral Denoising</h3>
+          <p><strong>H. Zeng</strong> and Wilfried Philips et al. [<a href="https://ieeexplore.ieee.org/abstract/document/10201900" target="_blank">paper</a>]</p>
+          <p>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</p>
+        </div>
+      </div>
+      
+      <!-- Publication 19 -->
+      <div class="publication">
+        <img src="./DPLRTA.png" alt="DPLRTA">
+        <div class="pub-info">
+          <h3>Hyperspectral Image Restoration via CNN Denoiser Prior Regularized Low-rank Tensor Recovery</h3>
+          <p><strong>H. Zeng</strong>, Jifeng Ning et al. [<a href="https://www.sciencedirect.com/science/article/pii/S1077314220300710" target="_blank">paper</a>]
+          <a href="https://github.com/NavyZeng/DPLRTA" target="_blank">[code]</a></p>
+          <p>Computer Vision and Image Understanding</p>
+        </div>
+      </div>
+      
     </section>
     
     <!-- Membership Section -->
@@ -214,10 +414,9 @@
       </ul>
     </section>
     
-    <!-- Reviewer Roles Section -->
-    <section id="reviewer">
-      <h2>Reviewer Roles</h2>
-      <h3>Journal Reviewer</h3>
+    <!-- Journal Reviewer Section -->
+    <section id="journal-reviewer">
+      <h2>Journal Reviewer</h2>
       <ul>
         <li>Journal of Computational and Applied Mathematics</li>
         <li>IEEE Transactions on Image Processing (TIP)</li>
@@ -234,19 +433,23 @@
         <li>Knowledge and Information Systems</li>
         <li>The Journal of Supercomputing</li>
       </ul>
-      <h3>Conference Reviewer</h3>
+    </section>
+    
+    <!-- Conference Reviewer Section -->
+    <section id="conference-reviewer">
+      <h2>Conference Reviewer</h2>
       <ul>
-        <li>ICLR</li>
-        <li>ICML</li>
-        <li>CVPR</li>
-        <li>ECCV</li>
-        <li>NeurIPS</li>
-        <li>AISTATS</li>
-        <li>AAAI</li>
+        <li>International Conference on Learning Representations (ICLR)</li>
+        <li>International Conference on Machine Learning (ICML)</li>
+        <li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+        <li>European Conference on Computer Vision (ECCV)</li>
+        <li>Conference on Neural Information Processing Systems (NeurIPS)</li>
+        <li>International Conference on Artificial Intelligence and Statistics (AISTATS)</li>
+        <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
         <li>ACM Multimedia (ACM MM)</li>
-        <li>IJCNN</li>
-        <li>ICME</li>
-        <li>ICASSP</li>
+        <li>International Joint Conference on Neural Networks (IJCNN)</li>
+        <li>IEEE Conference on Multimedia Expo (ICME)</li>
+        <li>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</li>
       </ul>
     </section>
     
@@ -254,10 +457,10 @@
     <section id="awards">
       <h2>Awards</h2>
       <ul>
-        <li>Third place in CVPR 2024 Mobile Intelligent Photography and Imaging (MIPI) challenge, CVPR</li>  
-        <li>2023 imec PhD Excellence Award, imec</li>
-        <li>Third place in ECCV 2022 MIPI challenge, ECCV</li>
-        <li>Top-Ten Distinguished Graduate Student, Northwest A&F University</li>
+        <li>Third place in CVPR 2024 Mobile Intelligent Photography and Imaging (MIPI) challenge, CVPR</li>
+        <li>2023 imec PhD Excellence Award, imec (Two per year across all imec research institutes)</li>
+        <li>Third place in ECCV 2022 Mobile Intelligent Photography and Imaging (MIPI) challenge, ECCV</li>
+        <li>Top-Ten Distinguished Graduate Student, 10/2400+ (Northwest A&F University)</li>
         <li>Outstanding Graduate Student, Shaanxi Province</li>
         <li>Outstanding Graduates Award, Top 10%, Northwest A&F University</li>
         <li>National Scholarship (&lt; 2%, Ministry of Education)</li>
@@ -271,15 +474,15 @@
     <!-- More About Me Section -->
     <section id="more">
       <h2>More about Me</h2>
-      <p>I'm a badminton enthusiast and I enjoy middle- to long-distance running.</p>
+      <p>I'm a badminton enthusiast, and I also find joy in middle- to long-distance running.</p>
     </section>
     
   </div>
   
-  <!-- Back-to-top button -->
+  <!-- Back-to-top Button -->
   <div class="back-to-top" id="backTop">Back to Top</div>
   
-  <!-- jQuery Script for back-to-top functionality -->
+  <!-- jQuery Script for Back-to-top Functionality -->
   <script>
     $(function(){
       $(window).scroll(function(){
@@ -294,6 +497,9 @@
       });
     });
   </script>
+  
+  <!-- RevolverMaps (if desired) -->
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5x3ebj080sx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async></script>
   
 </body>
 </html>
