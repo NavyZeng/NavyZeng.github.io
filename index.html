@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="./Files/DMU_64.ico">
   <title>Haijin Zeng</title>
   
-  <!-- Internal CSS inspired partly by GOV.UK style with your header background image -->
+  <!-- Internal CSS inspired partly by GOV.UK style, retaining the header background image and original publication image scale -->
   <style>
     /* Base Styles */
     body {
@@ -127,7 +127,7 @@
       font-size: 1.5em;
     }
     
-    /* Publications styling with enlarged images */
+    /* Publications styling – using original max-width for images */
     .publication {
       display: flex;
       flex-wrap: wrap;
@@ -137,7 +137,7 @@
       margin-bottom: 15px;
     }
     .publication img {
-      max-width: 300px; /* Enlarged from 200px */
+      max-width: 200px;  /* Original scale restored */
       border: 1px solid #b1b4b6;
       border-radius: 2px;
     }
